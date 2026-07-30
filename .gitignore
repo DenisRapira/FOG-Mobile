@@ -1,0 +1,12 @@
+.gradle/
+.tooling/
+.idea/
+build/
+*/build/
+local.properties
+keystore.properties
+*.jks
+*.keystore
+*.iml
+fog-prime-main.zip
+.fog-prime-reference/
