@@ -27,7 +27,7 @@ body:
       options:
         - Connectivity diagnostics
         - VPN permission or service lifecycle
-        - Instagram or YouTube package detection
+        - Sample application package detection
         - Compose UI or navigation
         - Build, tests, or release signing
         - Documentation

@@ -15,7 +15,7 @@ All notable changes to FOG Mobile are documented here. The project follows seman
 ### Added
 
 - Kotlin and Jetpack Compose Android application targeting API 36
-- Local DNS, TLS, CDN, and UDP route diagnostics for Instagram and YouTube
+- Local DNS, TLS, CDN, and UDP route diagnostics against configured sample endpoints
 - Hilt, Coroutines, StateFlow, Navigation Compose, and DataStore architecture
 - Android VpnService permission, foreground-service, package allowlist, and engine boundaries
 - Dashboard, onboarding, diagnostics, settings, and anonymized log export

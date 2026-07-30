@@ -20,6 +20,6 @@ You should receive an acknowledgement within seven days. Valid reports will be i
 
 ## Scope and guarantees
 
-The current baseline engine is non-operational and refuses to establish TUN. No claim is made that this technical preview provides anonymity, censorship resistance, endpoint security, or protection on hostile networks.
+The current baseline engine is non-operational and refuses to establish TUN. This educational preview does not claim to provide anonymity, endpoint security, or protection on hostile networks.
 
 Never send private signing keys, passwords, access tokens, cookies, raw traffic payloads, or another person's data in a report.

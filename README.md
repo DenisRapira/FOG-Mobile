@@ -14,18 +14,18 @@
   [![Android CI](https://github.com/DenisRapira/FOG-Mobile/actions/workflows/android-ci.yml/badge.svg)](https://github.com/DenisRapira/FOG-Mobile/actions/workflows/android-ci.yml)
 </div>
 
-FOG Mobile is an open-source Android application for Instagram and YouTube connectivity diagnostics. It demonstrates a privacy-focused `VpnService` boundary, per-app package allowlisting, real DNS and TLS health checks, bounded AUTO profile selection, Hilt dependency injection, DataStore preferences, and a Jetpack Compose Material 3 interface.
+FOG Mobile is an open-source educational Android application for learning network diagnostics and `VpnService` architecture. It demonstrates privacy-focused per-app package allowlisting, real DNS and TLS health checks, bounded AUTO profile selection, Hilt dependency injection, DataStore preferences, and a Jetpack Compose Material 3 interface.
 
 Inspired by the UI / Agent / Engine separation of [FOG Prime](https://github.com/DenisRapira/FOG-Prime), the Android implementation keeps network policy, diagnostics, service lifecycle, and UI state in explicit layers.
 
 > [!IMPORTANT]
-> The bundled `BaselineLocalNetworkEngine` does **not** include a userspace TCP/IP forwarding stack. It declares `canForwardPackets = false`, so `FogVpnService` refuses to establish TUN instead of blackholing Instagram or YouTube traffic. This repository is a tested Android network-diagnostics application and VpnService architecture foundation, not a working censorship-bypass release.
+> The bundled `BaselineLocalNetworkEngine` does **not** include a userspace TCP/IP forwarding stack. It declares `canForwardPackets = false`, so `FogVpnService` refuses to establish TUN instead of creating a traffic sink. This repository is a tested educational network-diagnostics application and `VpnService` architecture reference, not a commercial VPN product.
 
 ## Why FOG Mobile
 
-- **Real connectivity checks:** DNS resolution and certificate-validated TLS handshakes for Instagram, YouTube, and media CDN endpoints.
+- **Real connectivity checks:** DNS resolution and certificate-validated TLS handshakes against configured sample endpoints.
 - **Android VpnService architecture:** system VPN permission flow, foreground service lifecycle, TUN boundary, and explicit engine capability contract.
-- **Per-app VPN targeting:** official package discovery for Instagram, YouTube, and YouTube Music.
+- **Per-app VPN targeting:** installed-package discovery and a clear allowlist boundary for configured sample applications.
 - **Local-first privacy:** no remote VPN backend, MITM, custom CA, account, analytics, ads, or traffic-content logging.
 - **Modern Android stack:** Kotlin, Jetpack Compose, Material 3, Hilt, Coroutines, StateFlow, Navigation Compose, and DataStore.
 - **Production-oriented build:** API 36, JDK 17, R8 shrinking, signed APK/AAB, Android Lint, unit tests, and compiled instrumentation tests.
@@ -59,8 +59,8 @@ See [architecture notes](docs/FOG_MOBILE_ARCHITECTURE.md) for the FOG Prime mapp
 ## Features
 
 - Onboarding with Android VPN permission handling
-- Instagram DNS, TLS, and media CDN probes
-- YouTube DNS, TLS, video CDN, and UDP/443 route probes
+- DNS, TLS, media CDN, and UDP/443 sample probes
+- Educational diagnostic results with explicit supported and skipped states
 - Wi-Fi and mobile-network awareness
 - Bounded profile selection with no infinite retry loop
 - Dashboard, staged connection check, diagnostics, settings, and about screens
@@ -136,7 +136,7 @@ Please report security issues privately according to [SECURITY.md](SECURITY.md).
 
 No. There is no remote VPN backend or account service. The project demonstrates an Android `VpnService` boundary for local per-app processing.
 
-### Does the current release forward Instagram or YouTube traffic?
+### Does the current release forward application traffic?
 
 No. The baseline engine intentionally refuses to establish TUN until a real userspace forwarding implementation is supplied.
 
@@ -150,7 +150,7 @@ It provides the permission, lifecycle, allowlist, and engine integration boundar
 
 ## Русский
 
-FOG Mobile — open-source Android-приложение для диагностики доступности Instagram и YouTube и пример архитектуры `VpnService` на Kotlin и Jetpack Compose. Проверки DNS/TLS выполняются локально, без удалённого VPN, MITM, аналитики и сбора содержимого трафика. Текущий baseline-движок не пересылает пакеты и поэтому безопасно не поднимает TUN; полноценный userspace TCP/IP engine указан в roadmap.
+FOG Mobile — образовательное open-source Android-приложение для изучения сетевой диагностики и архитектуры `VpnService` на Kotlin и Jetpack Compose. Проверки DNS/TLS выполняются локально, без удалённого VPN, MITM, аналитики и сбора содержимого трафика. Текущий baseline-движок не пересылает пакеты и поэтому безопасно не поднимает TUN; полноценный userspace TCP/IP engine указан в roadmap.
 
 ## Contributing
 
