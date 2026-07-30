@@ -73,4 +73,4 @@ stateDiagram-v2
 
 ## Baseline engine boundary
 
-The APK implements a real Android `VpnService` boundary and resolves a per-app allowlist for official Instagram and YouTube packages. The current `BaselineLocalNetworkEngine` declares `canForwardPackets = false`; the service refuses to establish TUN and reports failure instead of blackholing app traffic. The forwarding engine remains behind the `NetworkEngine` interface so a production TCP/UDP flow manager can be added without coupling UI to packet handling.
+The APK implements a real Android `VpnService` boundary and resolves a per-app allowlist for configured sample applications. The current `BaselineLocalNetworkEngine` declares `canForwardPackets = false`; the service refuses to establish TUN and reports failure instead of creating a traffic sink. The forwarding engine remains behind the `NetworkEngine` interface so a production TCP/UDP flow manager can be added without coupling UI to packet handling.

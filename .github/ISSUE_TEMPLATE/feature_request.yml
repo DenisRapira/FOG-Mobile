@@ -1,0 +1,32 @@
+name: Feature request
+description: Propose a focused improvement to FOG Mobile
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What concrete Android or network-diagnostics problem should be solved?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Include lifecycle, privacy, licensing, and test considerations where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      options:
+        - label: This proposal does not require telemetry, MITM, a custom CA, or payload logging.
+          required: true
+        - label: I will disclose licenses for any proposed third-party code or binary.
+          required: true
