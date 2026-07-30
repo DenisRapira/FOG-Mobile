@@ -1,0 +1,64 @@
+name: Bug report
+description: Report a reproducible Android, diagnostics, UI, or lifecycle defect
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include passwords, tokens, cookies, signing keys, private traffic captures, or personal data."
+  - type: input
+    id: version
+    attributes:
+      label: FOG Mobile version or commit
+      placeholder: "0.1.0 or commit SHA"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: "Pixel 8, Android 16"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Connectivity diagnostics
+        - VPN permission or service lifecycle
+        - Instagram or YouTube package detection
+        - Compose UI or navigation
+        - Build, tests, or release signing
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest deterministic reproduction.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: I removed credentials, personal data, payloads, and private traffic captures.
+          required: true
+        - label: I understand the baseline engine does not currently forward traffic.
+          required: true

@@ -10,3 +10,4 @@ keystore.properties
 *.iml
 fog-prime-main.zip
 .fog-prime-reference/
+docs/assets/*-source.png
