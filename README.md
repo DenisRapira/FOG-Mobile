@@ -11,7 +11,7 @@ separation in [FOG Prime](https://github.com/DenisRapira/FOG-Prime). It targets 
 - CDN/media endpoint checks and an explicitly non-authoritative UDP/443 route probe.
 - Network observation, bounded AUTO profile selection, per-network preferences, diagnostics,
   anonymized log export, onboarding, settings, and status UI.
-- Official-package allowlist resolution for Instagram, YouTube, and YouTube Music.
+- Official-package allowlist resolution.
 - Foreground `VpnService` lifecycle and Android VPN permission flow.
 - Signed release APK/AAB, adaptive and monochrome icons, R8 shrinking, unit tests, lint, and
   compiled instrumentation tests.
